@@ -40,7 +40,7 @@
     <div th:each="map : ${jobs}" th:fragment="jobs">
         <table class="job-listing">
             <tr th:each="mapEntry : ${map}">
-                <td th:text="${mapEntry.key}"></td>
+                <td th:text="${#strings.capitalizeWords(mapEntry.key)}"></td>
                 <td th:text="${mapEntry.value}"></td>
             </tr>
         </table>
